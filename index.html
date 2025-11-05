@@ -1,223 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guía de Estancia en Quito</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía del Alojamiento - Quito</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
 
-    /* Barra de menú */
-    nav {
-      background-color: #d32f2f;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px 0;
-      flex-wrap: wrap;
-    }
+        .navbar {
+            background-color: #0077b6;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+            font-weight: 500;
+        }
 
-    nav a:hover {
-      text-decoration: underline;
-      color: #ffe082;
-    }
+        .navbar a:hover {
+            background-color: #005f87;
+            border-radius: 10px;
+        }
 
-    /* Imagen principal */
-    .hero {
-      width: 100%;
-      height: 250px;
-      overflow: hidden;
-    }
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
-    .hero img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
+        .banner {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
 
-    /* Contenido principal */
-    .content {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+        h1, h2 {
+            color: #0077b6;
+        }
 
-    h1 {
-      color: #b71c1c;
-      text-align: center;
-    }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-    h2 {
-      color: #d32f2f;
-      margin-top: 30px;
-    }
+        li::before {
+            content: "• ";
+            color: #0077b6;
+        }
 
-    ul {
-      margin-left: 20px;
-    }
+        p {
+            line-height: 1.6;
+        }
 
-    /* Contenedores informativos */
-    .checkin-container, .rules-container, .mobility-container, .visita-container {
-      border-radius: 8px;
-      margin: 30px 0;
-      padding: 20px;
-    }
-
-    .checkin-container {
-      background-color: #fff8e1;
-      border-left: 5px solid #fbc02d;
-    }
-
-    .rules-container {
-      background-color: #e8f5e9;
-      border-left: 5px solid #43a047;
-    }
-
-    .mobility-container {
-      background-color: #e3f2fd;
-      border-left: 5px solid #1976d2;
-    }
-
-    .visita-container {
-      background-color: #fff3e0;
-      border-left: 5px solid #ff9800;
-    }
-
-    .visita-container h3 {
-      color: #e65100;
-      margin-top: 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #d32f2f;
-      color: white;
-      margin-top: 40px;
-    }
-  </style>
+        hr {
+            margin: 30px 0;
+            border: none;
+            border-top: 2px solid #e0e0e0;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Barra de menú -->
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Habitación</a>
-    <a href="#visita">Visita</a>
-    <a href="#ubicacion">Ubicación</a>
-    <a href="#checkin">Check-in / Check-out</a>
-    <a href="#reglas">Reglas</a>
-    <a href="#movilidad">Movilidad</a>
-    <a href="#">Contacto</a>
-  </nav>
+    <div class="navbar">
+        <a href="#bienvenida">Bienvenida</a>
+        <a href="#lugares">Lugares cercanos</a>
+        <a href="#movilidad">Movilidad</a>
+        <a href="#reglas">Reglas</a>
+        <a href="#contacto">Contacto</a>
+    </div>
 
-  <!-- Imagen principal -->
-  <div class="hero">
-    <img src="quito.jpg" alt="Vista de Quito">
-  </div>
+    <div class="container">
 
-  <!-- Contenido principal -->
-  <div class="content">
-    <h1>¡Bienvenido a Quito!</h1>
+        <img src="quito.jpg" alt="Habitación Airbnb" class="banner">
 
-    <!-- NUEVA SECCIÓN VISITA -->
-    <div class="visita-container" id="visita">
-      <h3>🗺️ Qué visitar en Quito</h3>
-      <p>Quito es una ciudad llena de historia, cultura y paisajes impresionantes. Tu alojamiento está ubicado en una zona estratégica, en el sector de <strong>La Carolina</strong>, uno de los lugares más modernos y dinámicos de la capital. Aquí te dejamos algunas recomendaciones para disfrutar al máximo tu estancia:</p>
+        <h1 id="bienvenida">🏡 Bienvenido/a</h1>
+        <p>Tu alojamiento está ubicado en una zona segura y bien conectada de Quito, ideal para descansar o explorar la ciudad. A continuación encontrarás información útil para tu estadía.</p>
 
-      <h4>🌳 Parque La Carolina</h4>
-      <p>A solo unos pasos del departamento, este es el pulmón verde de la ciudad. Ideal para caminar, hacer deporte, disfrutar un picnic o recorrer sus senderos. Dentro del parque encontrarás:</p>
-      <ul>
-        <li>Jardín Botánico de Quito</li>
-        <li>Laguna</li>
-        <li>Ferias y eventos los fines de semana</li>
-      </ul>
+        <hr>
 
-      <h4>🏙️ Zona República del Salvador</h4>
-      <p>A pocos minutos caminando desde el alojamiento. Es una de las áreas más modernas de Quito, llena de vida y opciones para comer, comprar y relajarte.</p>
-      <ul>
-        <li>Restaurantes y cafeterías gourmet, terrazas con vista y bares elegantes.</li>
-        <li><strong>Centros comerciales cercanos:</strong></li>
+        <h2 id="lugares">🌄 Lugares cercanos para visitar</h2>
         <ul>
-          <li>🛍️ Quicentro Shopping (a 4 minutos caminando)</li>
-          <li>🛒 CCI (Centro Comercial Iñaquito) a 11 minutos caminando</li>
-          <li>🏬 CCNU a 6 minutos caminando</li>
-          <li>🏢 El Jardín a 5 minutos en Metro</li>
+            <li><strong>Mitad del Mundo:</strong> a unos 40 minutos en auto o bus, donde podrás pararte sobre la línea ecuatorial.</li>
+            <li><strong>Museo Intiñan:</strong> a pocos pasos de Mitad del Mundo, más interactivo y divertido.</li>
+            <li><strong>Volcán Pululahua:</strong> uno de los pocos cráteres habitados del mundo, con senderos y miradores.</li>
+            <li><strong>Otavalo:</strong> si deseas una escapada de día completo, el mercado indígena es famoso por sus tejidos y artesanías.</li>
         </ul>
-      </ul>
 
-      <h4>🏛️ Centro Histórico de Quito</h4>
-      <p>Declarado Patrimonio Cultural de la Humanidad por la UNESCO, se encuentra a unos 15 minutos en Metro (Parada San Francisco). Allí podrás descubrir:</p>
-      <ul>
-        <li>La Plaza Grande, La Catedral, El Palacio de Carondelet y La Compañía de Jesús, joyas arquitectónicas coloniales.</li>
-        <li>Calles empedradas, museos, artesanías y cafeterías tradicionales.</li>
-      </ul>
+        <hr>
 
-      <h4>🏞️ Otros lugares cercanos que vale la pena visitar</h4>
-      <ul>
-        <li>Parque Metropolitano Guangüiltagua – ideal para senderismo y ciclismo (10 min en auto).</li>
-        <li>Whymper – zona de vida nocturna, restaurantes y bares (15 min en auto).</li>
-        <li>TelefériQo de Quito – sube hasta los 4.000 m y disfruta una vista única del volcán Pichincha.</li>
-        <li>Mitad del Mundo – a unos 45 min en auto; podrás poner un pie en cada hemisferio y conocer el museo Intiñan.</li>
-      </ul>
+        <h2 id="movilidad">🚍 Movilidad y transporte cercano</h2>
+        <p>Tu alojamiento está ubicado en una zona muy bien conectada de Quito, lo que te permitirá moverte fácilmente por la ciudad utilizando el transporte público.</p>
 
-      <p><strong>✨ Consejo local:</strong>  
-      El clima de Quito puede cambiar rápido — en los meses de octubre, noviembre y diciembre suele llover algunas tardes. Te recomendamos venir preparado con un paraguas.</p>
+        <h3>🚇 Metro de Quito</h3>
+        <ul>
+            <li>Estación más cercana: <strong>Iñaquito</strong> (a unos 6 a 7 minutos caminando).</li>
+            <li>Llega rápidamente al norte, centro histórico o sur de la ciudad de forma cómoda y segura.</li>
+            <li>Tarifa: USD 0.45 por trayecto.</li>
+        </ul>
+
+        <h3>🚎 Ecovía</h3>
+        <ul>
+            <li>Parada más cercana: <strong>Naciones Unidas</strong>, a 10 minutos caminando.</li>
+            <li>Tarifa: USD 0.35.</li>
+            <li>Servicio frecuente cada 5 – 10 minutos.</li>
+        </ul>
+
+        <h3>🚊 Buses Urbanos</h3>
+        <ul>
+            <li>Parada más cercana: <strong>Av. De los Shirys</strong>, sector Quicentro Shopping (a 3 minutos caminando).</li>
+            <li>Varios circuitos hacia el norte y sur de la ciudad.</li>
+            <li>Tarifa: USD 0.35.</li>
+        </ul>
+
+        <h3>💡 Recomendaciones de movilidad</h3>
+        <ul>
+            <li>La ubicación te permite acceder a pie a la mayoría de servicios, restaurantes y tiendas.</li>
+            <li>En horas pico (7:00–9:00 a.m. y 5:00–7:00 p.m.) sal con tiempo extra.</li>
+            <li>Usa taxis seguros o apps como <strong>DiDi</strong> o <strong>Uber</strong>.</li>
+            <li>Explora caminando: Quito tiene zonas ideales para disfrutar del paisaje urbano.</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="reglas">🏡 Reglas de la Casa</h2>
+
+        <p>¡Bienvenido/a! Nos alegra mucho tenerte aquí 😊<br>
+        Para que todos podamos disfrutar de una estancia cómoda, segura y agradable, te pedimos amablemente leer y respetar las siguientes reglas:</p>
+
+        <h3>🌿 Respeto y convivencia</h3>
+        <ul>
+            <li>Esta es una vivienda compartida, por lo que podrás ver y coincidir con otros huéspedes en algunas áreas comunes. Te pedimos mantener una actitud amable y respetuosa en todo momento.</li>
+            <li>Cuida las cosas de la casa como si fueran tuyas. Evita mover objetos o usar pertenencias que no estén destinadas para los huéspedes.</li>
+            <li>Evita ruidos fuertes, música alta o conversaciones en voz elevada, especialmente entre 10:00 p.m. y 8:00 a.m., para garantizar el descanso de todos.</li>
+        </ul>
+
+        <h3>🚪 Áreas compartidas y restringidas</h3>
+        <ul>
+            <li>Puedes usar libremente las áreas comunes autorizadas (como pasillo, zona de trabajo, terraza, hall de recepción del edificio).</li>
+            <li>Por favor, mantén limpio y ordenado cada espacio después de usarlo.</li>
+            <li>Algunas áreas son de uso privado o restringido (como habitaciones no designadas para huéspedes, bodegas, cocina, sala-comedor o áreas de servicio). Te pedimos respetar esos espacios.</li>
+        </ul>
+
+        <h3>🗝️ Entrega y uso de llaves</h3>
+        <ul>
+            <li>Las llaves serán entregadas directamente por los anfitriones, junto con una breve explicación sobre el acceso al departamento y el uso de cada llave (puertas de acceso al edificio, puerta principal, habitación, y áreas comunes).</li>
+            <li>Al momento del check-out, por favor devuelve las llaves personalmente al anfitrión.</li>
+            <li>En caso de pérdida de las llaves, se aplicará una multa equivalente al costo de reposición, incluyendo el cambio de cerradura si fuera necesario.</li>
+        </ul>
+
+        <h3>🧑‍🤝‍🧑 Presencia del anfitrión</h3>
+        <ul>
+            <li>El anfitrión vive en el departamento y estará disponible durante tu estancia para brindarte apoyo y atención en lo que necesites.</li>
+        </ul>
+
+        <h3>🕒 Horarios</h3>
+        <ul>
+            <li>Check-in: a partir de las 12:00 pm.</li>
+            <li>Check-out: 11:00 am. Por favor, respeta la hora de salida establecida, ya que necesitamos tiempo suficiente para limpiar y preparar la habitación para los siguientes huéspedes.</li>
+            <li>Si necesitas una salida tardía, consúltalo con anticipación; haremos lo posible por ayudarte, según la disponibilidad.</li>
+        </ul>
+
+        <h3>🧼 Limpieza y cuidado</h3>
+        <ul>
+            <li>No está permitido fumar dentro de la habitación ni en áreas cerradas.</li>
+            <li>No se permiten fiestas ni reuniones sin autorización.</li>
+            <li>No se permite la entrada de otras personas al departamento que excedan el número de huéspedes permitidos por habitación.</li>
+            <li>Por favor, evita consumir alimentos en la cama y deposita la basura en los lugares indicados.</li>
+        </ul>
+
+        <h3>💬 Comunicación</h3>
+        <p>Si tienes alguna duda, necesitas algo o surge un inconveniente, no dudes en contactarnos. Estamos aquí para ayudarte y hacer que tu estancia sea lo más agradable posible.</p>
+
+        <hr>
+
+        <h2 id="contacto">📞 Contacto</h2>
+        <p>Tu comodidad y seguridad son nuestra prioridad. Ante cualquier emergencia o consulta, comunícate por la app de Airbnb.</p>
+
+        <p>¡Disfruta tu estancia y siéntete como en casa en Quito! 🌿</p>
+
     </div>
-
-    <!-- Secciones anteriores conservadas -->
-    <div class="checkin-container" id="checkin">
-      <h3>🕒 Horarios de Check-in y Check-out</h3>
-      <p><strong>Check-in:</strong> a partir de las <b>12:00 p.m.</b></p>
-      <p><strong>Check-out:</strong> hasta las <b>11:00 a.m.</b></p>
-      <p>Por favor, avísame si necesitas un horario especial. ¡Haré lo posible por ayudarte!</p>
-    </div>
-
-    <div class="rules-container" id="reglas">
-      <h3>🏡 Reglas de la Casa</h3>
-      <ul>
-        <li>No fumar dentro de la habitación ni en áreas cerradas.</li>
-        <li>No se permiten fiestas ni reuniones sin autorización.</li>
-        <li>Respetar las horas de descanso (10:00 p.m. a 8:00 a.m.).</li>
-        <li>Evita consumir alimentos en la cama y deposita la basura en los lugares indicados.</li>
-      </ul>
-    </div>
-
-    <div class="mobility-container" id="movilidad">
-      <h3>🚍 Movilidad y transporte cercano</h3>
-      <p>Tu alojamiento está ubicado en una zona muy bien conectada, con acceso al Metro, Ecovía y buses urbanos.</p>
-    </div>
-
-    <p>
-      Disfruta tu estancia y siéntete como en casa. 🌿  
-      Tu comodidad y seguridad son mi prioridad.  
-      Cualquier duda o emergencia, contáctame por la app de Airbnb.  
-      <strong>¡Bienvenido/a a Quito!</strong>
-    </p>
-  </div>
-
-  <footer>
-    &copy; 2025 - Tu anfitrión en Quito
-  </footer>
-
 </body>
 </html>
