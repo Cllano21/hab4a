@@ -14,7 +14,7 @@
       line-height: 1.6;
     }
 
-    /* Barra de menú */
+    /* Barra de menú fija */
     nav {
       background-color: #d32f2f;
       color: white;
@@ -23,6 +23,11 @@
       align-items: center;
       padding: 10px 0;
       flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     nav a {
@@ -31,11 +36,19 @@
       margin: 0 15px;
       font-weight: bold;
       transition: color 0.3s;
+      padding: 5px 10px;
+      border-radius: 4px;
     }
 
     nav a:hover {
       text-decoration: underline;
       color: #ffe082;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Espacio para compensar la barra fija */
+    body {
+      padding-top: 60px;
     }
 
     /* Imagen principal */
@@ -114,11 +127,100 @@
       color: white;
       margin-top: 40px;
     }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+      nav {
+        padding: 8px 0;
+      }
+      
+      nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+        padding: 4px 8px;
+      }
+      
+      .content {
+        margin: 20px 10px;
+        padding: 15px;
+      }
+      
+      .hero {
+        height: 200px;
+      }
+      
+      .hero img {
+        height: 200px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.3rem;
+      }
+      
+      h4 {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        padding: 5px 0;
+        height: auto;
+      }
+      
+      nav a {
+        margin: 3px 5px;
+        font-size: 0.85rem;
+      }
+      
+      body {
+        padding-top: 120px;
+      }
+      
+      .content {
+        margin: 10px 5px;
+        padding: 10px;
+      }
+      
+      .hero {
+        height: 150px;
+      }
+      
+      .hero img {
+        height: 150px;
+      }
+      
+      h1 {
+        font-size: 1.6rem;
+      }
+      
+      h2 {
+        font-size: 1.4rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+      
+      .checkin-container, .rules-container, .mobility-container, .visita-container {
+        padding: 15px;
+        margin: 20px 0;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Barra de menú -->
+  <!-- Barra de menú fija -->
   <nav>
     <a href="#">Inicio</a>
     <a href="#">Habitación</a>
