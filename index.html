@@ -208,7 +208,7 @@
       }
     }
 
-    /* --- MENÚ RESPONSIVO (Hamburguesa) --- */
+    /* --- MENÚ RESPONSIVO (Hamburguesa) CORREGIDO --- */
     .menu-toggle {
       display: none;
       background: none;
@@ -218,6 +218,7 @@
       cursor: pointer;
       position: absolute;
       right: 15px;
+      top: 10px;
     }
 
     @media (max-width: 600px) {
@@ -227,6 +228,9 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 10px;
+        height: 50px;
+        overflow: hidden;
+        transition: height 0.3s ease;
       }
 
       nav a {
@@ -234,6 +238,7 @@
         width: 100%;
         text-align: left;
         padding: 10px 0;
+        margin: 0;
         border-top: 1px solid rgba(255,255,255,0.2);
       }
 
@@ -241,6 +246,12 @@
         display: block;
       }
 
+      /* Cuando el menú está abierto */
+      nav.open {
+        height: auto;
+        min-height: 100vh;
+      }
+      
       nav.open a {
         display: block;
       }
@@ -251,6 +262,7 @@
 
   <!-- Barra de menú fija -->
   <nav>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
     <a href="#">Inicio</a>
     <a href="#">Habitación</a>
     <a href="#visita">Visita</a>
@@ -259,7 +271,6 @@
     <a href="#reglas">Reglas</a>
     <a href="#movilidad">Movilidad</a>
     <a href="#">Contacto</a>
-    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
   </nav>
 
   <!-- Imagen principal -->
@@ -447,7 +458,30 @@
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
-    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    
+    // Asegurarse de que el menú esté cerrado al cargar la página
+    nav.classList.remove('open');
+    
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      
+      // Cambiar el ícono del menú
+      if (nav.classList.contains('open')) {
+        toggle.textContent = '✕';
+      } else {
+        toggle.textContent = '☰';
+      }
+    });
+    
+    // Cerrar el menú al hacer clic en un enlace (en dispositivos móviles)
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 600) {
+          nav.classList.remove('open');
+          toggle.textContent = '☰';
+        }
+      });
+    });
   </script>
 
 </body>
